@@ -1,0 +1,163 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface-variant: #d3e4fe;
+  --color-primary: #0058be;
+  --color-on-surface-variant: #424754;
+  --color-error-container: #ffdad6;
+  --color-tertiary-fixed: #ffddb8;
+  --color-inverse-on-surface: #eaf1ff;
+  --color-primary-fixed-dim: #adc6ff;
+  --color-outline-variant: #c2c6d6;
+  --color-on-background: #0b1c30;
+  --color-secondary-container: #6cf8bb;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary: #825100;
+  --color-secondary-fixed-dim: #4edea3;
+  --color-on-error: #ffffff;
+  --color-inverse-surface: #213145;
+  --color-inverse-primary: #adc6ff;
+  --color-primary-fixed: #d8e2ff;
+  --color-surface: #f8f9ff;
+  --color-on-tertiary-fixed: #2a1700;
+  --color-surface-container-lowest: #ffffff;
+  --color-on-primary-container: #fefcff;
+  --color-primary-container: #2170e4;
+  --color-on-primary-fixed-variant: #004395;
+  --color-surface-tint: #005ac2;
+  --color-error: #ba1a1a;
+  --color-on-secondary-fixed: #002113;
+  --color-tertiary-container: #a36700;
+  --color-tertiary-fixed-dim: #ffb95f;
+  --color-on-primary: #ffffff;
+  --color-outline: #727785;
+  --color-background: #f8f9ff;
+  --color-on-secondary: #ffffff;
+  --color-surface-bright: #f8f9ff;
+  --color-surface-container-low: #eff4ff;
+  --color-on-secondary-fixed-variant: #005236;
+  --color-on-tertiary-fixed-variant: #653e00;
+  --color-surface-container-highest: #d3e4fe;
+  --color-surface-dim: #cbdbf5;
+  --color-on-error-container: #93000a;
+  --color-on-primary-fixed: #001a42;
+  --color-secondary-fixed: #6ffbbe;
+  --color-on-secondary-container: #00714d;
+  --color-on-tertiary-container: #fffbff;
+  --color-secondary: #006c49;
+  --color-on-surface: #0b1c30;
+  --color-surface-container: #e5eeff;
+  --color-surface-container-high: #dce9ff;
+
+  --border-radius-lg: 0.5rem;
+  --border-radius-xl: 0.75rem;
+
+  --spacing-stack-sm: 0.5rem;
+  --spacing-stack-md: 1rem;
+  --spacing-gutter: 1.5rem;
+  --spacing-margin-mobile: 1rem;
+  --spacing-stack-lg: 2rem;
+  --spacing-container-max: 900px;
+}
+
+@utility font-headline-md {
+  font-family: 'Inter', sans-serif;
+}
+@utility font-label-md {
+  font-family: 'Inter', sans-serif;
+}
+@utility font-body-lg {
+  font-family: 'Inter', sans-serif;
+}
+@utility font-headline-lg {
+  font-family: 'Inter', sans-serif;
+}
+@utility font-body-md {
+  font-family: 'Inter', sans-serif;
+}
+@utility font-task-title {
+  font-family: 'Inter', sans-serif;
+}
+@utility font-headline-lg-mobile {
+  font-family: 'Inter', sans-serif;
+}
+
+@utility text-headline-md {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+}
+@utility text-label-md {
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+@utility text-body-lg {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+@utility text-headline-lg {
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+@utility text-body-md {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+@utility text-task-title {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+}
+@utility text-headline-lg-mobile {
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+@utility task-completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+@utility custom-checkbox {
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border: 2px solid var(--color-outline);
+  border-radius: 6px;
+  outline: none;
+  cursor: pointer;
+  display: grid;
+  place-content: center;
+  transition: all 0.2s ease;
+
+  &::before {
+    content: "check";
+    font-family: "Material Symbols Outlined";
+    font-size: 16px;
+    color: var(--color-on-primary);
+    font-weight: bold;
+    transform: scale(0);
+    transition: transform 0.15s ease;
+  }
+
+  &:checked {
+    background-color: var(--color-secondary);
+    border-color: var(--color-secondary);
+
+    &::before {
+      transform: scale(1);
+    }
+  }
+
+  &:hover {
+    border-color: var(--color-primary);
+  }
+}
