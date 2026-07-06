@@ -111,6 +111,3 @@ To run the automated API tests for the backend (which verify database constraint
 cd backend
 npm test
 ```
-
-## License
-MIT License
